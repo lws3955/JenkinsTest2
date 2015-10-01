@@ -1,0 +1,12 @@
+<project>
+	<target name="clean">
+		<delete dir="logs"/>
+	</target>
+	<target name="run">
+		<mkdir dir="logs"/>
+		<exec executable="ifconfig" output="logs/ifconfig.log"/>
+		<exec executable="cat">
+			<arg value="logs/ifconfig.log"/>
+		</exec>
+	</target>
+</project>
